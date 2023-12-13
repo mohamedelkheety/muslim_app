@@ -1,6 +1,6 @@
-# math_for_you
+# muslim_app
 
-A new Flutter project by my.
+A new Flutter project By:Mohamed Elkheety
 
 ## Getting Started
 
