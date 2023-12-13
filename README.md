@@ -1,6 +1,6 @@
 # math_for_you
 
-A new Flutter project.
+A new Flutter project by my.
 
 ## Getting Started
 
