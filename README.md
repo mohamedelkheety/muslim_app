@@ -1,6 +1,6 @@
 # muslim_app
 
-A new Flutter project.
+A new Flutter project By:Mohamed Elkheety.
 
 ## Getting Started
 
