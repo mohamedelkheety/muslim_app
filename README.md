@@ -1,4 +1,4 @@
-# math_for_you
+# muslim_app
 
 A new Flutter project.
 
