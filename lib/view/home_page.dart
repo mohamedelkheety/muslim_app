@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_app/widgets/category.dart';
+import 'package:muslim_app/widgets/home_page/category.dart';
 
 import '../widgets/home_page/row_one.dart';
 import '../widgets/home_page/row_three.dart';
