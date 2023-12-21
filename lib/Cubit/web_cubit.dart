@@ -2,34 +2,33 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:muslim_app/Cubit/khotba_state.dart';
+import 'package:muslim_app/Cubit/web_state.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class KhotbaCubit extends Cubit<KotbaState> {
-  KhotbaCubit() : super(KhotbaInitial());
+class WebViewCubit extends Cubit<WebState> {
+  WebViewCubit() : super(KhotbaInitial());
 
-  void webViewKhotba() {
+  void webViewWidget({required String url}) {
     try {
+      emit(WebLoading());
+      log('loading');
       WebViewWidget(
           controller: WebViewController()
+            ..loadRequest(Uri.parse(url))
             ..setJavaScriptMode(JavaScriptMode.unrestricted)
             ..setBackgroundColor(const Color(0x00000000))
             ..setNavigationDelegate(
               NavigationDelegate(
                 onPageStarted: (String url) {
-                  emit(KotbaSuccess());
+                  emit(WebSuccess());
                   log('onStarted');
                 },
                 onPageFinished: (String url) {},
                 onWebResourceError: (WebResourceError error) {},
               ),
-            )
-            ..loadRequest(Uri.parse(
-                "https://audio.islamweb.net/audio/index.php?page=lectures&kh=1")));
-      emit(KotbaLoading());
-      log('loading');
+            ));
     } catch (e) {
-      emit(KotbaFialur());
+      emit(WebFialur());
       log('Fialur');
     }
   }

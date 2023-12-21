@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:muslim_app/Cubit/khotba_cubit.dart';
+import 'package:muslim_app/Cubit/web_cubit.dart';
 import 'package:muslim_app/view/developer.dart';
-import 'package:muslim_app/view/khotba_Web.dart';
+import 'package:muslim_app/view/web_view_custom.dart';
 import 'package:muslim_app/widgets/small_category.dart';
 
 class DevloperAndKhotabRow extends StatelessWidget {
@@ -24,9 +24,14 @@ class DevloperAndKhotabRow extends StatelessWidget {
             title: 'مَن نَحن؟'),
         SmallCategory(
             onTap: () {
-              BlocProvider.of<KhotbaCubit>(context).webViewKhotba();
+              BlocProvider.of<WebViewCubit>(context).webViewWidget(
+                  url:
+                      'https://audio.islamweb.net/audio/index.php?page=lectures&kh=1');
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return const KhotbaWebView();
+                return const WebView(
+                    url:
+                        'https://audio.islamweb.net/audio/index.php?page=lectures&kh=1',
+                    titelAppBar: 'خُطَبٌ مسمُوْعَة');
               }));
             },
             imageIcon: 'asset/imageicon/kotba.png',
