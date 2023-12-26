@@ -4,6 +4,7 @@ import 'package:muslim_app/widgets/home_page/category.dart';
 import '../widgets/home_page/row_one.dart';
 import '../widgets/home_page/row_three.dart';
 import '../widgets/home_page/row_two.dart';
+import 'home_page_body.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -20,23 +21,6 @@ class HomePage extends StatelessWidget {
             style: TextStyle(fontSize: 40),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Column(children: [
-            const Category(),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.011,
-            ),
-            const QuranAndMwaqeetRow(),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.011,
-            ),
-            const AzkarAndSebhaRow(),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.011,
-            ),
-            const DevloperAndKhotabRow(),
-          ]),
-        ));
+        body: const HomePageBody());
   }
 }

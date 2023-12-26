@@ -61,13 +61,13 @@ class AllBook extends StatelessWidget {
                     path: 'asset/book/1  السيرة النبوية.pdf',
                     bookNameAndTitelAppBar: 'السيرة النبوية لابن هشام 1'),
                 BookModel(
-                    path: 'asset/book/2  السيرة النبوية.pdf',
+                    path: 'asset/book/السيرة النبوية 2.pdf',
                     bookNameAndTitelAppBar: 'السيرة النبوية لابن هشام 2'),
                 BookModel(
-                    path: 'asset/book/3  السيرة النبوية.pdf',
+                    path: 'asset/book/السيرة النبوية 3.pdf',
                     bookNameAndTitelAppBar: 'السيرة النبوية لابن هشام 3'),
                 BookModel(
-                    path: 'asset/book/4  السيرة النبوية.pdf',
+                    path: 'asset/book/السيرة النبوية 4.pdf',
                     bookNameAndTitelAppBar: 'السيرة النبوية لابن هشام 4')
               ], nameWidget: 'السِّيْرة النبوية '),
               name: 'السِّيْرة',
